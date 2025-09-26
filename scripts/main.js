@@ -3,8 +3,11 @@ console.log("Hola Mundo!");
 var div1 = document.getElementById("div1");
 var div2 = document.getElementById("div2");
 
-var nombre = localStorage.getItem("nombreUser");
-document.getElementById("nombre").innerText = "Hola " + nombre + "!";
+//var nombre = localStorage.getItem("nombreUser");
+var user = JSON.parse(localStorage.getItem("user"));
+document.getElementById("nombreMostrar").innerText = "Hola " + user.nombre + " " + user.apellido + "!";
+
+
 
 function mostrarMensaje() {
     alert("Has hecho click en el botón");
@@ -50,7 +53,35 @@ function enviarForm() {
 }
 
 function guardarDatos() {
-    var dato = document.getElementById("datossss").value;
+    // var dato = document.getElementById("datossss").value;
     // sessionStorage.setItem("miDato", dato);
-    localStorage.setItem("nombreUser", dato);
+    // localStorage.setItem("nombreUser", dato);
+
+    /* var user = [];
+    user.push(document.getElementById("nombre").value);
+    user.push(document.getElementById("password").value);
+    user.push(document.getElementById("fecha").value);
+    user.push(document.getElementById("suscripcion").checked);
+    user.push(document.getElementById("terminos").checked);
+    user.push(document.getElementById("notificaciones").checked);
+    user.push(document.querySelector('input[name="opciones"]:checked').value);
+    user.push(document.getElementById("pais").value);
+    user.push(document.getElementById("mensaje").value);
+    console.log(user); */
+
+    var user = {
+        nombre: document.getElementById("nombre").value,
+        apellido: document.getElementById("apellido").value,
+        password: document.getElementById("password").value,
+        fecha: document.getElementById("fecha").value,
+        suscripcion: document.getElementById("suscripcion").checked,
+        terminos: document.getElementById("terminos").checked,
+        notificaciones: document.getElementById("notificaciones").checked,
+        opcion: document.querySelector('input[name="opciones"]:checked').value,
+        pais: document.getElementById("pais").value,
+        mensaje: document.getElementById("mensaje").value
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+
 }

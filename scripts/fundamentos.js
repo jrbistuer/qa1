@@ -26,3 +26,16 @@ array.push(4);
 console.log(array);
 console.log(array.indexOf(4));
 console.log(array.lastIndexOf(4));
+
+var objeto = {
+    nombre: "Juan",
+    edad: 30,
+    profesion: "Desarrollador"
+};
+console.log(objeto);
+console.log(objeto.nombre);
+console.log(objeto["nombre"]);
+objeto.nombre = "Pedro";
+console.log(objeto.nombre);
+objeto.apellido = "García";
+console.log(objeto);
