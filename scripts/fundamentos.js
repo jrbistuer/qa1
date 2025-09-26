@@ -1,0 +1,28 @@
+var mensaje = "Hola Mundo";
+console.log(mensaje);
+console.log(mensaje.toUpperCase());
+var numero = 10;
+var decimal = 5.5;
+var booleano = true;
+var nulo = null;
+var indefinido;
+console.log(indefinido);
+
+var array = [1, 2, 3, 4, 5];
+console.log(array);
+console.log(array[2]);
+console.log("primer elemento: " + array[0]);
+console.log("segundo elemento: " + array[1]);
+console.log("sexto elemento: " + array[5]);
+console.log("cuantos elementos tiene: " + array.length);
+console.log("último elemento: " + array[array.length - 1]);
+array.push(6);
+console.log(array);
+array.pop();
+console.log(array);
+array.shift();
+console.log(array);
+array.push(4);
+console.log(array);
+console.log(array.indexOf(4));
+console.log(array.lastIndexOf(4));

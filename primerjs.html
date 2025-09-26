@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style4.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="nombre"></h1>
+
+        <h1>Ejemplos de formulario</h1>
+
+        <button id="btn1" onclick="mostrarMensaje()">Mostrar mensaje</button>
+
+        <br/>
+
+        <button id="btn2" onclick="fillDiv()">Llenar div</button>
+
+        <br/>
+
+        <div id="div1">Algo</div>
+
+        <br/>
+
+        <h1>Reto 1</h1>
+
+        <button id="btn3" onclick="mostrarMensaje2()">Muestra Hola Mundo</button>
+
+        <br/>
+
+        <button id="btn4" onclick="cambiarEstilo()">Cambia estilo</button>
+
+        <br/>
+
+        <div id="div2"></div>
+
+        <h1>Formularios</h1>
+
+        <form id="form1">
+
+            <h2>Inputs</h2>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <br/>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br/>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password">
+            <br/>
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+            <br/>
+
+            <h2>Textarea</h2>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" maxlength="500" rows="5"></textarea>
+
+            <h2>Checkbox</h2>
+            <input type="checkbox" id="suscripcion" name="suscripcion">
+            <label for="suscripcion">Suscribirse al boletín</label>
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos">Aceptar términos y condiciones</label>
+            <input type="checkbox" id="notificaciones" name="notificaciones">
+            <label for="notificaciones">Recibir notificaciones</label>
+
+            <h2>Radio Buttons</h2>
+            <input type="radio" id="opcion1" name="opciones" value="opcion1">
+            <label for="opcion1">Opción 1</label>
+            <input type="radio" id="opcion2" name="opciones" value="opcion2">
+            <label for="opcion2">Opción 2</label>
+            <input type="radio" id="opcion3" name="opciones" value="opcion3">
+            <label for="opcion3">Opción 3</label>
+
+            <h2>Lista desplegable</h2>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="mexico">México</option>
+                <option value="espana">España</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="chile">Chile</option>
+            </select>
+
+            <button type="button" id="sendForm" onclick="enviarForm()">Enviar</button>
+
+        </form>
+
+        <h2>Ejemplo persistencia</h2>
+
+        <label for="datossss">Nombre de usuario:</label>
+        <input type="text" id="datossss" name="datossss">
+
+        <button id="btnGuardar" onclick="guardarDatos()">Guardar nombre de usuario</button>
+
+    </div>
+
+</body>
+</html>
