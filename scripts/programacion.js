@@ -3,10 +3,12 @@ writeToConsole("Hola Mundo desde programacion.js");
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 
+const arrayResultados = [];
+
 function mostrarMensaje() {
 }
 
-function sumar() {
+function sumar() {  
     const resultado = returnSuma(num1.value, num2.value);
     document.getElementById("resultadoValor").innerHTML = resultado;
     if (resultado > 100) {
@@ -19,6 +21,13 @@ function sumar() {
         document.getElementById("resultadoValor").style.color = "black";
         document.getElementById("resultadoValor").style.fontWeight = "normal";
     }
+    console.log(arrayResultados);
+    resultInHTML = "";
+    for (let i = 0; i < arrayResultados.length; i++) {
+       resultInHTML = resultInHTML + "Resultado: " + arrayResultados[i] + "<br>";
+    }
+    document.getElementById("historialResultados").innerHTML = resultInHTML;
+    arrayResultados.push(resultado);
 }
 
 function writeToConsole(message) {
