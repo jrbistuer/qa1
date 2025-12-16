@@ -84,4 +84,11 @@ function guardarDatos() {
 
     localStorage.setItem("user", JSON.stringify(user));
 
+    var users = JSON.parse(localStorage.getItem("users")) || [];
+    var htmlparamostrar = "<ul>";
+    for (let i = 0; i < users.length; i++) {
+        htmlparamostrar += "<li>" + users[i].nombre + " " + users[i].apellido + " - " + users[i].pais + "</li>";
+    }
+    htmlparamostrar += "</ul>";
+    document.getElementById("usuarios").innerHTML = htmlparamostrar;
 }
